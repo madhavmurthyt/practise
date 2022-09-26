@@ -1,0 +1,98 @@
+
+// var MyHashSet = function() {
+//     this.hs = {};
+// };
+
+// /** 
+//  * @param {number} key
+//  * @return {void}
+//  */
+// MyHashSet.prototype.add = function(key) {
+//     if (!this.hs[key]) {    
+//          this.hs[key] = true;
+//          console.log(this.hs)
+//      }
+   
+// };
+
+// /** 
+//  * @param {number} key
+//  * @return {void}
+//  */
+// MyHashSet.prototype.remove = function(key) {
+   
+//     if (this.hs[key]) {
+//     delete this.hs[key];
+//   }
+    
+// };
+
+// /** 
+//  * @param {number} key
+//  * @return {boolean}
+//  */
+// MyHashSet.prototype.contains = function(key) {
+//     if (this.hs[key]) { 
+//          return true; 
+//         } else {
+//             return false;
+//     }
+    
+// };
+
+// // Your MyHashSet object will be instantiated and called as such:
+//  var obj = new MyHashSet()
+//  console.log(obj.add('madhav'))
+//  //console.log(obj.remove('madhav'))
+//  console.log(obj.contains('madhav'))
+ 
+
+
+var MyHashMap = function() {
+    this.hs = {}
+    
+};
+
+/** 
+ * @param {number} key 
+ * @param {number} value
+ * @return {void}
+ */
+MyHashMap.prototype.put = function(key, value) {
+       
+    this.hs[key] = value;
+  
+    
+};
+
+/** 
+ * @param {number} key
+ * @return {number}
+ */
+MyHashMap.prototype.get = function(key) {
+   
+    if(this.hs[key] !== undefined) {
+        return this.hs[key]
+    } else return -1;
+    
+};
+
+/** 
+ * @param {number} key
+ * @return {void}
+ */
+MyHashMap.prototype.remove = function(key) {
+    if(this.hs[key]) {
+        delete this.hs[key]
+    }
+    
+};
+
+ 
+ // Your MyHashMap object will be instantiated and called as such:
+ var obj = new MyHashMap()
+ console.log(obj.put(11,0))
+ console.log(obj.get(11))
+
+
+ 
